@@ -1,0 +1,12 @@
+name: "astrbot_plugin_self_manage"
+display_name: "Agent 自我维护"
+author: "Aires"
+version: "v0.1.0"
+desc: "让 Agent 自我维护 Bot：把工作区文件内容写入当前会话人格的 system_prompt；读取最近 N 分钟的 AstrBot 日志（支持按 debug/info/warn/error 过滤）。附 /selfmanage_logs、/selfmanage_persona 两条人工验证指令。"
+repo: "https://github.com/AiE1487/astrbot_plugin_self_manage"
+astrbot_version: ">=4.16,<5"
+tags:
+  - 人格
+  - 日志
+  - 自维护
+  - agent

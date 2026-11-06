@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+dist/
+.v2c/_tools/
+.v2c/sandbox/
+.v2c/__pycache__/
+.ruff_cache/
+.zcode/

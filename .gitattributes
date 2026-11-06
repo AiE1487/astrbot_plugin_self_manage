@@ -1,0 +1,5 @@
+# 仓库内统一 LF（AstrBot 宿主常见 Linux/Docker 环境），检出也保持 LF
+* text=auto eol=lf
+*.exe binary
+*.zip binary
+*.png binary

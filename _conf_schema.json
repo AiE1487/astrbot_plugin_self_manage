@@ -1,0 +1,42 @@
+{
+  "require_admin": {
+    "description": "两个 LLM 工具是否仅限管理员",
+    "hint": "开启后，只有管理员消息触发的会话里 Agent 才能调用这两个工具；不影响 /selfmanage_* 指令（日志指令本身就限管理员）。",
+    "type": "bool",
+    "default": false
+  },
+  "log_buffer_size": {
+    "description": "日志内存缓冲条数",
+    "hint": "插件挂载后把宿主日志缓存在内存里的最大条数（越旧越被顶出）；修改后需重载插件生效。",
+    "type": "int",
+    "default": 4000,
+    "slider": { "min": 500, "max": 20000, "step": 100 }
+  },
+  "log_default_minutes": {
+    "description": "日志工具默认回看分钟数",
+    "hint": "agent 调用工具未指定 minutes 时使用的默认回看窗口。",
+    "type": "int",
+    "default": 5,
+    "slider": { "min": 1, "max": 120, "step": 1 }
+  },
+  "log_max_return_lines": {
+    "description": "日志单次返回行数上限",
+    "hint": "超过上限时保留最新的部分并提示已丢弃更早的条目。",
+    "type": "int",
+    "default": 300,
+    "slider": { "min": 50, "max": 1000, "step": 50 }
+  },
+  "log_file_fallback": {
+    "description": "历史时间窗读取 data/logs 日志文件",
+    "hint": "查询时间早于插件挂载时刻时，扫描 data/logs/*.log* 兜底解析。",
+    "type": "bool",
+    "default": true
+  },
+  "persona_prompt_max_kb": {
+    "description": "人格提示词文件大小上限（KB）",
+    "hint": "防止把超大文件整体塞进人格提示词。",
+    "type": "int",
+    "default": 100,
+    "slider": { "min": 10, "max": 500, "step": 10 }
+  }
+}
